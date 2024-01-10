@@ -1,0 +1,1362 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='3456px' height='2304px' viewbox="0 0 3456 2304">
+
+  <style>
+    .heading {
+      font-size: 80px;
+      block-progression: tb;
+      fill: url(#heading-gradient);
+      text-indent: 0;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-transform: none;
+      line-height: normal;
+    }
+
+    .name {
+      font-size: 45px;
+      fill: black;
+      color: black;
+    }
+
+    .small {
+      font-size: 40px;
+      fill: black;
+      color: black;
+    }
+
+    .heavy {
+      font: bold 50px sans-serif;
+    }
+
+    #bold {
+      font: bold;
+    }
+
+    #large {
+      font-size: 65px;
+    }
+  </style>
+
+  <!-- filter for canvas effect-->
+  <filter id="canvas">
+    <feTurbulence type="turbulence" baseFrequency="0.1 0.66" numOctaves="3" Seed="20" result="n" />
+    <feBlend in="n" result="noise" mode="multiply" />
+    <feDiffuseLighting in="n" result="light" lighting-color='#f5f3eb'>
+      <feDistantLight azimuth="45" elevation="60" filtername="feDistantLight" />
+    </feDiffuseLighting>
+  </filter>
+
+  <!-- filter for dream effect-->
+  <defs>
+    <linearGradient gradientTransform="rotate(-150, 0.5, 0.5)" x1="50%" y1="0%" x2="50%" y2="100%" id="dream-gradient2">
+      <stop stop-color="hsl(194, 63%, 86%)" stop-opacity="1" offset="-0%">
+      </stop>
+      <stop stop-color="rgba(255,255,255,0)" stop-opacity="0" offset="100%">
+      </stop>
+    </linearGradient>
+    <linearGradient gradientTransform="rotate(150, 0.5, 0.5)" x1="50%" y1="0%" x2="50%" y2="100%" id="dream-gradient3">
+      <stop stop-color="hsl(227, 100%, 50%)" stop-opacity="1">
+      </stop>
+      <stop stop-color="rgba(255,255,255,0)" stop-opacity="0" offset="100%">
+      </stop>
+    </linearGradient>
+    <filter id="dream-filter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" Seed="209" width="100" height="100"
+        result="Turbulence">
+      </feTurbulence>
+      <feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="turbulence"
+        result="colormatrix">
+      </feColorMatrix>
+      <feComponentTransfer x="0%" y="0%" width="100%" height="100%" in="colormatrix" result="componentTransfer">
+        <feFuncR type="linear" slope="3"></feFuncR>
+        <feFuncG type="linear" slope="3"></feFuncG>
+        <feFuncB type="linear" slope="3"></feFuncB>
+      </feComponentTransfer>
+      <feColorMatrix x="0%" y="0%" width="100%" height="100%" in="componentTransfer" result="colormatrix2" type="matrix"
+        values="1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 19 -11">
+      </feColorMatrix>
+    </filter>
+  </defs>
+
+  <!--Gradient for Heading-->
+  <defs>
+    <linearGradient id="heading-gradient">
+      <stop stop-color="#d94123" offset="0%" />
+      <stop stop-color="#c2157a" offset="25%" />
+      <stop stop-color="#581aa3" offset="50%" />
+      <stop stop-color="#1158ad" offset="75%" />
+      <stop stop-color="#14a32e" offset="100%" />
+    </linearGradient>
+  </defs>
+
+  <font>
+    <font-face font-family="Super Sans" />
+  </font>
+
+
+  <!-- this is to show the outline of the poster-->
+  <rect width="3456" height="2304" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+
+  <!--BACKGROUND-->
+  <!-- Left Top background- dream-->
+  <g>
+    <rect width="100%" height="100%" fill="hsl(0, 90%, 90%)"></rect>
+    <rect width="100%" height="100%" fill="url(#dream-gradient3)"></rect>
+    <rect width="100%" height="100%" fill="url(#dream-gradient2)"></rect>
+    <rect width="100%" height="100%" fill="transparent" filter="url(#dream-filter)" opacity="1"
+      style="mix-blend-mode: soft-light"></rect>
+  </g>
+  <!-- Left Bottom background- canvas-->
+  <rect fill='#f5f3eb' x="0" y="1300" width='1572' height='1300' filter="url(#canvas)" />
+  <!--Right Top background- layer wave-->
+  <rect fill='#ffaa00' x="1728" y="0" width='1728' height='1172' />
+  <svg xmlns='http://www.w3.org/2000/svg' x="1728" y="0" width='67%' height='68%' viewBox='0 0 1728 1172'>
+    <g fill-opacity='0.4'>
+      <path fill='#ffb100'
+        d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z' />
+      <path fill='#ffb800'
+        d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z' />
+      <path fill='#ffbe00'
+        d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z' />
+      <path fill='#ffc500'
+        d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z' />
+      <path fill='#ffcc00'
+        d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z' />
+      <path fill='#ffd914'
+        d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z' />
+      <path fill='#ffe529'
+        d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z' />
+      <path fill='#ffef3d'
+        d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z' />
+      <path fill='#fff852'
+        d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z' />
+      <path fill='#ffff66' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z' />
+    </g>
+  </svg>
+
+
+  <!--HEADING-->
+  <path
+    d="M 200 250 L 500 120 L 900 200 L 950 140 L 1000 180 L 1050 150 L 1100 160 L 1200 200 L 1500 110 L 1700 200 C 1700 200, 1800 100, 1600 200 L 1640 200 L 1680 80 L 1700 150 L 1780 200 L 2000 120 L 2300 190 C 2500 80, 2700 300, 3100 150 C 3100 140, 3150 300, 3300 200"
+    stroke-width="20px" stroke="url(#heading-gradient)" fill="none" opacity="0.2" />
+
+  <text x="350" y="200" class="heading">Digital art in code: Investigating SVG creativity, precision, and
+    accessibility</text>
+  <text x='1300' y='300' class='name'>Pearl Zhang, Yuhan Wang, Catherine Chen, Jeff Huang</text>
+  <g>
+    <image x="600" y="250" width="200" height="150" xlink:href="./Brown_Logo.png"/>
+    <image x="800" y="250" width="200" height="150" xlink:href="./smith_logo.png"/>
+    <image x="1030" y="250" width="200" height="150" xlink:href="./swarthmore_logo.png"/>
+  </g>
+
+  <!--overview-->
+  
+  <text y="415" class="heavy">
+    <tspan x="140" dy="1.2em" fill="green">SVG</tspan>
+    <tspan> images</tspan>
+    <tspan x="140" dy="1.2em" rotate="7">-creative, scalable, precise</tspan>
+    <tspan x="140" dy="1.2em" rotate="-7">-the best choice for background</tspan>
+  </text>
+  <text y="600" class="small">
+    <tspan x="180" dy="1.2em" fill="blue">&lt;svg xmlns='http://www.w3.org/2000/svg' x="180" y="650"&gt;</tspan>
+    <tspan x="200" dy="1.2em" fill="blue">&lt;text&gt;</tspan>
+    <tspan x="260" dy="1.2em" fill="blue">&lt;tspan&gt;</tspan><tspan></tspan> Web page backgrounds are mainly minimalist
+    <tspan x="280" dy="1.2em">  (white, solid color, gradient)</tspan><tspan fill="blue">&lt;/tspan&gt;</tspan>
+      <tspan x="260" dy="1.2em" fill="blue">&lt;tspan&gt;</tspan><tspan> Rescale raster images will lead to loss of pixel quality</tspan><tspan fill="blue">&lt;/tspan&gt;</tspan>
+    <tspan x="260" dy="1.2em" fill="blue">&lt;tspan&gt;</tspan><tspan> Vector graphics </tspan>
+    <tspan fill="blue" x="260" dy="1.2em">&lt;tspan fill=</tspan><tspan fill="orange">"green"</tspan><tspan fill="blue"> dx=</tspan><tspan fill="orange">"1,2,3,4,5,6"&gt;</tspan> <tspan fill="green" dx="1,2,3,4,5,6"><tspan fill="green" dx="1,2,3,4,5,6">do not </tspan><tspan fill="blue">&lt;/tspan&gt;</tspan></tspan><tspan x="260" dy="1.2em" fill="black"><tspan fill="blue">&lt;tspan&gt;</tspan>deteriorate pixel quality to adjust different screen sizes</tspan><tspan fill="blue">&lt;/tspan&gt;</tspan>
+    <tspan x="260" dy="1.2em"><tspan fill="blue">&lt;tspan&gt;</tspan>&lt;svg&gt; has mnay built-in <tspan rotate="10">transformation,</tspan> <tspan fill="green">texture,</tspan> and animation effects<tspan fill="blue">&lt;/tspan&gt;</tspan></tspan>
+    <tspan fill="blue" x="200" dy="1.2em">&lt;/text&gt;</tspan>
+    <tspan fill="blue" x="180" dy="1.2em">&lt;/svg&gt;</tspan>
+  </text>
+
+  <!--filtered.ink usability study-->
+  <text y="430" class="heavy">
+    <tspan x="1800" dy="1.2em" fill="green">filtered.ink</tspan>
+    <tspan x="1800" dy="1.2em" rotate="7">-SVG illustration application software</tspan>
+    <tspan x="1800" dy="1.2em" rotate="-7">-how do <tspan fill="green"> users with non-technical backgrounds</tspan>
+      respond?</tspan>
+  </text>
+  <text y="650" class="small">
+    <tspan x="1840" dy="1.2em">• 10 students with fine arts backgrounds participated in a user study with filtered.ink
+    </tspan>
+  </text>
+  <g>
+    <image x="1740" y="720" width="600" height="350" xlink:href="./ConvolveMatrix.png" />
+    <image x="2040" y="720" width="600" height="350" xlink:href="./DiffuseLighting.png" />
+    <image x="2340" y="720" width="600" height="350" xlink:href="./Turbulence.png" />
+    <image x="2640" y="720" width="600" height="350" xlink:href="./ComponentTransfer.png" />
+  </g>
+
+
+  <!--SVG Showcase-->
+  <text x="540" y="1250" class="heavy" id="large">
+    <tspan fill="green" dx="50,10,10,5,5,0,0,0,5,5,10,10,50" dy="50,10,10,5,5,0,0,0,-5,-5,-10,-10,-50">SVG Showcase
+    </tspan>
+    <tspan x="538" y="1298" dx="50,10,10,5,5,0,0,0,5,5,10,10,50" dy="50,10,10,5,5,0,0,0,-5,-5,-10,-10,-50">SVG Showcase
+    </tspan>
+  </text>
+
+  <!--Christmas line art-->
+  <g>
+    <g>
+      <svg x="50" y="1300" width="400" height="400" viewBox="= 0 400 400" xmlns='http://www.w3.org/2000/svg'>
+        <!--background-->
+        <defs>
+          <!-- <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+          <stop stop-color="lightgreen" />
+        </linearGradient> -->
+
+          <pattern id="Pattern" x="0" y="0" width=".025" height=".025">
+            <rect x="0" y="0" width="5" height="5" fill="#50501F" />
+            <rect x="5" y="5" width="5" height="5" fill="#50501F" />
+            <rect x="0" y="5" width="5" height="5" fill="#C54438" />
+            <rect x="5" y="0" width="5" height="5" fill="#C54438" />
+          </pattern>
+        </defs>
+
+        <rect fill="url(#Pattern)" width="400" height="400" />
+
+        <!--tree-->
+        <polygon points="200,120 60,300 340,300" fill="#204316" />
+        <polygon points="200,60 100,200 300,200" fill="#2E5C21" />
+        <polygon points="200,0 140,100 260,100" fill="#428330" />
+        <rect x="170" y="300" height="70" width="60" fill="#6D2C23" />
+
+        <!--ball-->
+        <circle cx="204" cy="22" r="3" fill="none" stroke="#F3CB8B" stroke-width="1" />
+        <rect x="198" y="25" height="4" width="12" fill="#F3CB8B" />
+        <circle cx="204" cy="38" r="10" fill="pink" stroke="red" stroke-width="1" />
+
+        <!--gingerbread-->
+        <circle cx="185" cy="150" r="10" fill="#B78359" />
+
+        <line x1="175" y1="165" x2="195" y2="165" stroke="#B78359" stroke-width="10" stroke-linecap="round" />
+        <line x1="185" y1="165" x2="175" y2="185" stroke="#B78359" stroke-width="10" stroke-linecap="round" />
+        <line x1="185" y1="165" x2="195" y2="185" stroke="#B78359" stroke-width="10" stroke-linecap="round" />
+
+        <circle cx="190" cy="150" r="2" fill="white" />
+        <circle cx="180" cy="150" r="2" fill="white" />
+        <line x1="183" y1="155" x2="187" y2="155" stroke="white" stroke-width="3" stroke-linecap="round" />
+        <line x1="183" y1="155" x2="187" y2="155" stroke="#B78359" stroke-width="1" stroke-linecap="round" />
+        <circle cx="185" cy="165" r="2" />
+        <circle cx="185" cy="172" r="2" />
+      </svg>
+    </g>
+    <text x="70" y="1740" class="small">
+      <tspan fill="#bb2528">Christmas</tspan>
+      <tspan fill="#165b33">Tree</tspan> Line Art
+    </text>
+  </g>
+
+  <!--Gradient art-->
+  <g>
+    <g>
+      <svg x="50" y="1800" width="200" height="400" xmlns="http://www.w3.org/2000/svg">
+        <!--filter-->
+        <filter id="blur">
+          <feGaussianBlur stdDeviation="5" />
+        </filter>
+
+        <filter id="blurB">
+          <feGaussianBlur stdDeviation="50" />
+        </filter>
+
+        <!--background two ball-->
+        <circle cx="50" cy="150" r="125" fill="lightgreen" opacity="0.8" filter="url(#blurB)" />
+        <circle cx="150" cy="50" r="125" fill="lightblue" opacity="0.6" filter="url(#blurB)" />
+
+        <rect x="200" y="0" width="200" height="200" fill="white" />
+
+        <!--background one ball with stroke opacity-->
+        <circle cx="107" cy="300" r="90" stroke="lightgreen" stroke-width="80" stroke-opacity="80%" fill="green"
+          opacity=".5" filter="url(#blurB)" />
+      </svg>
+    </g>
+    <text y="1850" class="small">
+      <tspan x="70" dy="1.2em">Too</tspan>
+      <tspan x="70" dy="1.2em" opacity="0.7">Transparent</tspan>
+      <tspan x="70" dy="1.2em">to</tspan>
+      <tspan x="70" dy="1.2em">see</tspan>
+      <tspan x="70" dy="1.2em">through</tspan>
+      <tspan x="70" dy="1.2em">gradient</tspan>
+    </text>
+  </g>
+
+  <!--Wavesss-->
+  <g>
+    <g>
+      <svg x="500" y="1400" width="700" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+        <!--changing color wave one line stroke, stroke-width can be below 1 or around 20, opacity above 75-->
+        <path stroke-width="1px" stroke="rgb(0, 90, 255)" fill="none"
+          d="M 10,50 Q 25,25 40,50 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="1px" stroke="rgb(0, 100, 245)" fill="none"
+          d="M 10,70 Q 25,45 40,70 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="1px" stroke="rgb(0, 110, 235)" fill="none"
+          d="M 10,90 Q 25,65 40,90 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="1px" stroke="rgb(0, 120, 225)" fill="none"
+          d="M 10,110 Q 25,85 40,110 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="1px" stroke="rgb(0, 130, 215)" fill="none"
+          d="M 10,130 Q 25,105 40,130 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="1px" stroke="rgb(0, 140, 215)" fill="none"
+          d="M 10,150 Q 25,125 40,150 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="1px" stroke="rgb(0, 150, 225)" fill="none"
+          d="M 10,170 Q 25,145 40,170 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="1px" stroke="rgb(0, 160, 235)" fill="none"
+          d="M 10,190 Q 25,165 40,190 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="1px" stroke="rgb(0, 170, 245)" fill="none"
+          d="M 10,210 Q 25,185 40,210 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="1px" stroke="rgb(0, 180, 255)" fill="none"
+          d="M 10,230 Q 25,205 40,230 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+
+        <path stroke-width='20px' opacity='0.75' stroke="rgb(0, 180, 255)" fill="none"
+          d="M 260,50 Q 275,25 290,50 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width='20px' opacity='0.75' stroke="rgb(0, 170, 245)" fill="none"
+          d="M 260,70 Q 275,45 290,70 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width='20px' opacity='0.75' stroke="rgb(0, 160, 235)" fill="none"
+          d="M 260,90 Q 275,65 290,90 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width='20px' opacity='0.75' stroke="rgb(0, 150, 225)" fill="none"
+          d="M 260,110 Q 275,85 290,110 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width='20px' opacity='0.75' stroke="rgb(0, 140, 215)" fill="none"
+          d="M 260,130 Q 275,105 290,130 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width='20px' opacity='0.75' stroke="rgb(0, 130, 215)" fill="none"
+          d="M 260,150 Q 275,125 290,150 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width='20px' opacity='0.75' stroke="rgb(0, 120, 225)" fill="none"
+          d="M 260,170 Q 275,145 290,170 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width='20px' opacity='0.75' stroke="rgb(0, 110, 235)" fill="none"
+          d="M 260,190 Q 275,165 290,190 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width='20px' opacity='0.75' stroke="rgb(0, 100, 245)" fill="none"
+          d="M 260,210 Q 275,185 290,210 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width='20px' opacity='0.75' stroke="rgb(0, 90, 255)" fill="none"
+          d="M 260,230 Q 275,205 290,230 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+
+        <path stroke-width="20px" stroke="rgb(0, 90, 255)" fill="none"
+          d="M 520,50 Q  535,25 550,50 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="20px" stroke="rgb(0, 100, 245)" fill="none"
+          d="M 520,70 Q  535,45 550,70 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="20px" stroke="rgb(0, 110, 235)" fill="none"
+          d="M 520,90 Q  535,65 550,90 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="20px" stroke="rgb(0, 120, 225)" fill="none"
+          d="M 520,110 Q 535,85 550,110 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="20px" stroke="rgb(0, 130, 215)" fill="none"
+          d="M 520,130 Q 535,105 550,130 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="20px" stroke="rgb(0, 140, 215)" fill="none"
+          d="M 520,150 Q 535,125 550,150 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="20px" stroke="rgb(0, 150, 225)" fill="none"
+          d="M 520,170 Q 535,145 550,170 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="20px" stroke="rgb(0, 160, 235)" fill="none"
+          d="M 520,190 Q 535,165 550,190 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="20px" stroke="rgb(0, 170, 245)" fill="none"
+          d="M 520,210 Q 535,185 550,210 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+        <path stroke-width="20px" stroke="rgb(0, 180, 255)" fill="none"
+          d="M 520,230 Q 535,205 550,230 t 30,0 30,0 30,0 30,0 30,0 30,0" />
+
+      </svg>
+    </g>
+    <text x="570" y="1700" class="small">
+      <tspan dy="0,9,6,9,-3,-6,3,6,-9,-10" dx="1,1,1,1,1,1,1,1">Wwwavy~~~ Layered Gradient</tspan>
+    </text>
+  </g>
+
+  <!--Beating Heart-->
+  <g>
+    <g>
+      <svg x="350" y="1800" height="200" width="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <g transform="translate(100 100)">
+          <path transform="translate(-50 -50)" fill="tomato"
+            d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z">
+          </path>
+          <animateTransform attributeName="transform" type="scale" values="1; 1.5; 1.25; 1.5; 1.5; 1;" dur="1s"
+            repeatCount="indefinite" additive="sum">
+          </animateTransform>
+        </g>
+      </svg>
+    </g>
+    <text y="2000" class="small">
+      <tspan x="350">It's actually</tspan>
+      <tspan x="330" dy="1em" font-size="45px">a beating </tspan>
+      <tspan fill="#ff52b4">heart</tspan>
+    </text>
+  </g>
+
+  <!--Dithering Palette-->
+  <g>
+    <g>
+      <image x="300" y="2100" width="600" height="120" xlink:href="./DitheringPalette.png" />
+    </g>
+    <text x="300" y="2260" class="small">
+      <tspan>a dithering rainbow palette</tspan>
+    </text>
+  </g>
+
+  <!--Dithering-->
+  <g>
+    <g>
+      <image x="630" y="1760" width="250" height="250" xlink:href="./Dithering.png" />
+    </g>
+    <text y="1800" class="small">
+      <tspan x="900" dy="0em">d</tspan>
+      <tspan x="905" dy="0.8em">d</tspan>
+      <tspan x="900" dy="0.8em">d</tspan>
+      <tspan x="905" dy="0.8em">i</tspan>
+      <tspan x="900" dy="0.8em">t</tspan>
+      <tspan x="905" dy="0.8em">h</tspan>
+      <tspan x="900" dy="0.8em">e</tspan>
+      <tspan x="905" dy="0.8em">r</tspan>
+
+    </text>
+  </g>
+
+  <!--Red Dithering-->
+  <g>
+    <g>
+      <image x="1100" y="1680" width="350" height="170" xlink:href="./RedDithering.png" />
+    </g>
+    <text y="1730" class="small">
+      <tspan x="1450" dy="0em">What</tspan>
+      <tspan x="1475" dy="0.8em">is</tspan>
+      <tspan x="1450" dy="0.8em">this</tspan>
+      <tspan x="1475" dy="0.8em">beautiful</tspan>
+      <tspan x="1450" dy="0.8em" fill='maroon'>noise</tspan>
+
+    </text>
+  </g>
+
+  <!--Dream Dithering-->
+  <g>
+    <g>
+      <image x="1280" y="1220" width="350" height="350" xlink:href="./DreamDithering.png" />
+    </g>
+    <text y="1450" class="small">
+      <tspan x="1240" dy="0em" fill='green'>D</tspan>
+      <tspan x="1240" dy="0.8em" fill='teal'>r</tspan>
+      <tspan x="1240" dy="0.8em" fill='blue'>e</tspan>
+      <tspan x="1240" dy="0.8em" fill='purple'>a</tspan>
+      <tspan x="1240" dy="0.8em" fill='red'>m</tspan>
+      <tspan x="1280" dy="1.2em" dx="3,3,3,3,3,3,3,3,3,3,3,3"> Dithering~</tspan>
+
+    </text>
+  </g>
+
+  <!--Blocks Animation shadow-->
+  <g>
+    <g>
+      <svg xmlns='http://www.w3.org/2000/svg' x="1000" y="1900" width='300' height='300' viewBox='0 0 300 300'>
+        <defs>
+          <radialGradient id="background">
+            <stop offset='0' stop-color='yellow' />
+            <stop offset='1' stop-color='#ff5100' />
+          </radialGradient>
+
+          <pattern id="background_block" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+            <g>
+              <!--upper right box-->
+              <rect x="50" y="0" width="50" height="50" fill='#ffd500' />
+              <path fill='url(#a)' d="M 50,0 50,30 100,30 100,0">
+                <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+                  values="M 50,0 50,15 100,15 100,0; M 50,0 50,5 100,5 100,0; M 50,0 50,15 100,15 100,0" />
+              </path>
+              <path fill='url(#b)' d="M 50,0 50,50 65,50 65,0">
+                <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+                  values="M 50,0 50,50 65,50 65,0; M 50,0 50,50 55,50 55,0; M 50,0 50,50 65,50 65,0" />
+              </path>
+              <path fill='url(#e)' d="M 95,50 100,50 100,0 95,0">
+                <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+                  values="M 95,50 100,50 100,0 95,0; M 99,50 100,50 100,0 99,0; M 95,50 100,50 100,0 95,0" />
+              </path>
+            </g>
+            <g>
+              <!--lower left box-->
+              <rect x="0" y="50" width="50" height="50" fill='#ffd500' />
+              <path fill='url(#a)' d="M 0,50 0,65 50,65 50,50">
+                <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+                  values="M 0,50 0,65 50,65 50,50; M 0,50 0,65 50,65 50,50; M 0,50 0,65 50,65 50,50" />
+              </path>
+              <path fill='url(#b)' d="M 0,50 0,100 15,100 15,50">
+                <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+                  values="M 0,50 00,100 5,100 5,50; M 00,50 00,100 15,100 15,50; M 00,50 00,100 5,100 5,50" />
+              </path>
+              <path fill='url(#e)' d="M 45,100 50,100 50,50 45,50">
+                <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+                  values="M 49,100 50,100 50,50 49,50; M 45,100 50,100 50,50 45,50; M 49,100 50,100 50,50 49,50" />
+              </path>
+            </g>
+          </pattern>
+
+          <linearGradient id="a" gradientUnits="objectBoundingBox" gradientTransform="rotate(90)">
+            <stop offset='0.25' stop-color='#000' stop-opacity='0.8' />
+            <stop offset='0.7' stop-color='#000' stop-opacity='0' />
+          </linearGradient>
+          <linearGradient id="b" gradientUnits="objectBoundingBox">
+            <stop offset='0.25' stop-color='#000' stop-opacity='0.8' />
+            <stop offset='0.7' stop-color='#000' stop-opacity='0' />
+          </linearGradient>
+          <linearGradient id="e" gradientUnits="objectBoundingBox">x
+            <stop offset='0.1' stop-color='#000' stop-opacity='0' />
+            <stop offset='0.9' stop-color='#000' stop-opacity='0.4' />
+          </linearGradient>
+        </defs>
+
+
+        <rect fill='#ff6200' width='300' height='300' />
+        <circle cx="150" cy="300" r="336" fill="url(#background)" fill-opacity='0.4' />
+        <rect x="0" y="0" width="300" height="300" fill="url(#background_block)" fill-opacity='0.4' />
+
+      </svg>
+    </g>
+  </g>
+
+  <!--Blocks Animation White shadow-->
+  <g>
+    <g>
+      <svg xmlns='http://www.w3.org/2000/svg' x="1350" y="1900" width='300' height='300' viewBox='0 0 300 300'>
+        <defs>
+          <radialGradient id="background">
+            <stop offset='0' stop-color='yellow' />
+            <stop offset='1' stop-color='#ff5100' />
+          </radialGradient>
+
+          <pattern id="background_block" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect x="50" y="0" width="50" height="50" fill='#ffd500' />
+            <rect x="0" y="50" width="50" height="50" fill='#ffd500' />
+
+          </pattern>
+
+          <linearGradient id="a" gradientUnits="objectBoundingBox" gradientTransform="rotate(90)">
+            <stop offset='0.25' stop-color='#000' stop-opacity='0.8' />
+            <stop offset='0.7' stop-color='#000' stop-opacity='0' />
+          </linearGradient>
+          <linearGradient id="b" gradientUnits="objectBoundingBox">
+            <stop offset='0.25' stop-color='#000' stop-opacity='0.8' />
+            <stop offset='0.7' stop-color='#000' stop-opacity='0' />
+          </linearGradient>
+          <linearGradient id="e" gradientUnits="objectBoundingBox">x
+            <stop offset='0.1' stop-color='#000' stop-opacity='0' />
+            <stop offset='0.9' stop-color='#000' stop-opacity='0.4' />
+          </linearGradient>
+        </defs>
+
+
+        <rect fill='#ff8000' width='300' height='300' />
+        <circle cx="300" cy="300" r="501" fill="url(#background)" fill-opacity='0.4' />
+        <rect x="0" y="0" width="300" height="300" fill="url(#background_block)" fill-opacity='0.4' />
+        <g fill-opacity='0.8'>
+          <path fill="white" d="M 0,0 0,20.142368348510796 50,20.142368348510796 50,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 0,0 0,20.142368348510796 50,20.142368348510796 50,0 ; M 0,0 0,0 50,0 50,0 ; M 0,0 0,20.142368348510796 50,20.142368348510796 50,0 " />
+          </path>
+          <path fill="white" d="M 0,0 0,50 20.142368348510796,50 20.142368348510796,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 0,0 0,50 20.142368348510796,50 20.142368348510796,0 ; M 0,0 0,50 0,50 0,0 ; M 0,0 0,50 20.142368348510796,50 20.142368348510796,0 " />
+          </path>
+          <path fill="white" d="M 41.94305266059568,0 50,0 50,50 41.94305266059568,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 41.94305266059568,0 50,0 50,50 41.94305266059568,50 ; M 50,0 50,0 50,50 50,50 ; M 41.94305266059568,0 50,0 50,50 41.94305266059568,50 " />
+          </path>
+          <path fill="white" d="M 0,50 0,71.82022939418196 50,71.82022939418196 50,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 0,50 0,71.82022939418196 50,71.82022939418196 50,50 ; M 0,50 0,50 50,50 50,50 ; M 0,50 0,71.82022939418196 50,71.82022939418196 50,50 " />
+          </path>
+          <path fill="white" d="M 0,50 0,100 21.82022939418197,100 21.82022939418197,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 0,50 0,100 21.82022939418197,100 21.82022939418197,50 ; M 0,50 0,100 0,100 0,50 ; M 0,50 0,100 21.82022939418197,100 21.82022939418197,50 " />
+          </path>
+          <path fill="white" d="M 41.271908242327214,50 50,50 50,100 41.271908242327214,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 41.271908242327214,50 50,50 50,100 41.271908242327214,100 ; M 50,50 50,50 50,100 50,100 ; M 41.271908242327214,50 50,50 50,100 41.271908242327214,100 " />
+          </path>
+          <path fill="white" d="M 0,100 0,122.88436876206262 50,122.88436876206262 50,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 0,100 0,122.88436876206262 50,122.88436876206262 50,100 ; M 0,100 0,100 50,100 50,100 ; M 0,100 0,122.88436876206262 50,122.88436876206262 50,100 " />
+          </path>
+          <path fill="white" d="M 0,100 0,150 22.884368762062618,150 22.884368762062618,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 0,100 0,150 22.884368762062618,150 22.884368762062618,100 ; M 0,100 0,150 0,150 0,100 ; M 0,100 0,150 22.884368762062618,150 22.884368762062618,100 " />
+          </path>
+          <path fill="white" d="M 40.84625249517495,100 50,100 50,150 40.84625249517495,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 40.84625249517495,100 50,100 50,150 40.84625249517495,150 ; M 50,100 50,100 50,150 50,150 ; M 40.84625249517495,100 50,100 50,150 40.84625249517495,150 " />
+          </path>
+          <path fill="white" d="M 0,150 0,168.00173443578763 50,168.00173443578763 50,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 0,150 0,168.00173443578763 50,168.00173443578763 50,150 ; M 0,150 0,150 50,150 50,150 ; M 0,150 0,168.00173443578763 50,168.00173443578763 50,150 " />
+          </path>
+          <path fill="white" d="M 0,150 0,200 18.00173443578762,200 18.00173443578762,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 0,150 0,200 18.00173443578762,200 18.00173443578762,150 ; M 0,150 0,200 0,200 0,150 ; M 0,150 0,200 18.00173443578762,200 18.00173443578762,150 " />
+          </path>
+          <path fill="white" d="M 42.79930622568495,150 50,150 50,200 42.79930622568495,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 42.79930622568495,150 50,150 50,200 42.79930622568495,200 ; M 50,150 50,150 50,200 50,200 ; M 42.79930622568495,150 50,150 50,200 42.79930622568495,200 " />
+          </path>
+          <path fill="white" d="M 0,200 0,217.34424527686133 50,217.34424527686133 50,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 0,200 0,217.34424527686133 50,217.34424527686133 50,200 ; M 0,200 0,200 50,200 50,200 ; M 0,200 0,217.34424527686133 50,217.34424527686133 50,200 " />
+          </path>
+          <path fill="white" d="M 0,200 0,250 17.34424527686133,250 17.34424527686133,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 0,200 0,250 17.34424527686133,250 17.34424527686133,200 ; M 0,200 0,250 0,250 0,200 ; M 0,200 0,250 17.34424527686133,250 17.34424527686133,200 " />
+          </path>
+          <path fill="white" d="M 43.062301889255465,200 50,200 50,250 43.062301889255465,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 43.062301889255465,200 50,200 50,250 43.062301889255465,250 ; M 50,200 50,200 50,250 50,250 ; M 43.062301889255465,200 50,200 50,250 43.062301889255465,250 " />
+          </path>
+          <path fill="white" d="M 0,250 0,266.23974460850576 50,266.23974460850576 50,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 0,250 0,266.23974460850576 50,266.23974460850576 50,250 ; M 0,250 0,250 50,250 50,250 ; M 0,250 0,266.23974460850576 50,266.23974460850576 50,250 " />
+          </path>
+          <path fill="white" d="M 0,250 0,300 16.239744608505752,300 16.239744608505752,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 0,250 0,300 16.239744608505752,300 16.239744608505752,250 ; M 0,250 0,300 0,300 0,250 ; M 0,250 0,300 16.239744608505752,300 16.239744608505752,250 " />
+          </path>
+          <path fill="white" d="M 43.504102156597696,250 50,250 50,300 43.504102156597696,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 43.504102156597696,250 50,250 50,300 43.504102156597696,300 ; M 50,250 50,250 50,300 50,300 ; M 43.504102156597696,250 50,250 50,300 43.504102156597696,300 " />
+          </path>
+          <path fill="white" d="M 0,300 0,319.87014266597043 50,319.87014266597043 50,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 0,300 0,319.87014266597043 50,319.87014266597043 50,300 ; M 0,300 0,300 50,300 50,300 ; M 0,300 0,319.87014266597043 50,319.87014266597043 50,300 " />
+          </path>
+          <path fill="white" d="M 0,300 0,350 19.87014266597045,350 19.87014266597045,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 0,300 0,350 19.87014266597045,350 19.87014266597045,300 ; M 0,300 0,350 0,350 0,300 ; M 0,300 0,350 19.87014266597045,350 19.87014266597045,300 " />
+          </path>
+          <path fill="white" d="M 42.05194293361182,300 50,300 50,350 42.05194293361182,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 42.05194293361182,300 50,300 50,350 42.05194293361182,350 ; M 50,300 50,300 50,350 50,350 ; M 42.05194293361182,300 50,300 50,350 42.05194293361182,350 " />
+          </path>
+          <path fill="white" d="M 0,350 0,368.5624207221149 50,368.5624207221149 50,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 0,350 0,368.5624207221149 50,368.5624207221149 50,350 ; M 0,350 0,350 50,350 50,350 ; M 0,350 0,368.5624207221149 50,368.5624207221149 50,350 " />
+          </path>
+          <path fill="white" d="M 0,350 0,400 18.562420722114897,400 18.562420722114897,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 0,350 0,400 18.562420722114897,400 18.562420722114897,350 ; M 0,350 0,400 0,400 0,350 ; M 0,350 0,400 18.562420722114897,400 18.562420722114897,350 " />
+          </path>
+          <path fill="white" d="M 42.57503171115404,350 50,350 50,400 42.57503171115404,400 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 42.57503171115404,350 50,350 50,400 42.57503171115404,400 ; M 50,350 50,350 50,400 50,400 ; M 42.57503171115404,350 50,350 50,400 42.57503171115404,400 " />
+          </path>
+          <path fill="white" d="M 50,0 50,16.52116142262302 100,16.52116142262302 100,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 50,0 50,16.52116142262302 100,16.52116142262302 100,0 ; M 50,0 50,0 100,0 100,0 ; M 50,0 50,16.52116142262302 100,16.52116142262302 100,0 " />
+          </path>
+          <path fill="white" d="M 50,0 50,50 66.52116142262302,50 66.52116142262302,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 50,0 50,50 66.52116142262302,50 66.52116142262302,0 ; M 50,0 50,50 50,50 50,0 ; M 50,0 50,50 66.52116142262302,50 66.52116142262302,0 " />
+          </path>
+          <path fill="white" d="M 93.3915354309508,0 100,0 100,50 93.3915354309508,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 93.3915354309508,0 100,0 100,50 93.3915354309508,50 ; M 100,0 100,0 100,50 100,50 ; M 93.3915354309508,0 100,0 100,50 93.3915354309508,50 " />
+          </path>
+          <path fill="white" d="M 50,50 50,65.28342848714132 100,65.28342848714132 100,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 50,50 50,65.28342848714132 100,65.28342848714132 100,50 ; M 50,50 50,50 100,50 100,50 ; M 50,50 50,65.28342848714132 100,65.28342848714132 100,50 " />
+          </path>
+          <path fill="white" d="M 50,50 50,100 65.28342848714132,100 65.28342848714132,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 50,50 50,100 65.28342848714132,100 65.28342848714132,50 ; M 50,50 50,100 50,100 50,50 ; M 50,50 50,100 65.28342848714132,100 65.28342848714132,50 " />
+          </path>
+          <path fill="white" d="M 93.88662860514347,50 100,50 100,100 93.88662860514347,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 93.88662860514347,50 100,50 100,100 93.88662860514347,100 ; M 100,50 100,50 100,100 100,100 ; M 93.88662860514347,50 100,50 100,100 93.88662860514347,100 " />
+          </path>
+          <path fill="white" d="M 50,100 50,114.89644139051377 100,114.89644139051377 100,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 50,100 50,114.89644139051377 100,114.89644139051377 100,100 ; M 50,100 50,100 100,100 100,100 ; M 50,100 50,114.89644139051377 100,114.89644139051377 100,100 " />
+          </path>
+          <path fill="white" d="M 50,100 50,150 64.89644139051377,150 64.89644139051377,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 50,100 50,150 64.89644139051377,150 64.89644139051377,100 ; M 50,100 50,150 50,150 50,100 ; M 50,100 50,150 64.89644139051377,150 64.89644139051377,100 " />
+          </path>
+          <path fill="white" d="M 94.04142344379449,100 100,100 100,150 94.04142344379449,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 94.04142344379449,100 100,100 100,150 94.04142344379449,150 ; M 100,100 100,100 100,150 100,150 ; M 94.04142344379449,100 100,100 100,150 94.04142344379449,150 " />
+          </path>
+          <path fill="white" d="M 50,150 50,171.07719828649442 100,171.07719828649442 100,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 50,150 50,171.07719828649442 100,171.07719828649442 100,150 ; M 50,150 50,150 100,150 100,150 ; M 50,150 50,171.07719828649442 100,171.07719828649442 100,150 " />
+          </path>
+          <path fill="white" d="M 50,150 50,200 71.07719828649444,200 71.07719828649444,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 50,150 50,200 71.07719828649444,200 71.07719828649444,150 ; M 50,150 50,200 50,200 50,150 ; M 50,150 50,200 71.07719828649444,200 71.07719828649444,150 " />
+          </path>
+          <path fill="white" d="M 91.56912068540223,150 100,150 100,200 91.56912068540223,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 91.56912068540223,150 100,150 100,200 91.56912068540223,200 ; M 100,150 100,150 100,200 100,200 ; M 91.56912068540223,150 100,150 100,200 91.56912068540223,200 " />
+          </path>
+          <path fill="white" d="M 50,200 50,224.35660752950292 100,224.35660752950292 100,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 50,200 50,224.35660752950292 100,224.35660752950292 100,200 ; M 50,200 50,200 100,200 100,200 ; M 50,200 50,224.35660752950292 100,224.35660752950292 100,200 " />
+          </path>
+          <path fill="white" d="M 50,200 50,250 74.35660752950292,250 74.35660752950292,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 50,200 50,250 74.35660752950292,250 74.35660752950292,200 ; M 50,200 50,250 50,250 50,200 ; M 50,200 50,250 74.35660752950292,250 74.35660752950292,200 " />
+          </path>
+          <path fill="white" d="M 90.25735698819884,200 100,200 100,250 90.25735698819884,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 90.25735698819884,200 100,200 100,250 90.25735698819884,250 ; M 100,200 100,200 100,250 100,250 ; M 90.25735698819884,200 100,200 100,250 90.25735698819884,250 " />
+          </path>
+          <path fill="white" d="M 50,250 50,272.3896810749694 100,272.3896810749694 100,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 50,250 50,272.3896810749694 100,272.3896810749694 100,250 ; M 50,250 50,250 100,250 100,250 ; M 50,250 50,272.3896810749694 100,272.3896810749694 100,250 " />
+          </path>
+          <path fill="white" d="M 50,250 50,300 72.38968107496942,300 72.38968107496942,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 50,250 50,300 72.38968107496942,300 72.38968107496942,250 ; M 50,250 50,300 50,300 50,250 ; M 50,250 50,300 72.38968107496942,300 72.38968107496942,250 " />
+          </path>
+          <path fill="white" d="M 91.04412757001224,250 100,250 100,300 91.04412757001224,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 91.04412757001224,250 100,250 100,300 91.04412757001224,300 ; M 100,250 100,250 100,300 100,300 ; M 91.04412757001224,250 100,250 100,300 91.04412757001224,300 " />
+          </path>
+          <path fill="white" d="M 50,300 50,319.854793653173 100,319.854793653173 100,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 50,300 50,319.854793653173 100,319.854793653173 100,300 ; M 50,300 50,300 100,300 100,300 ; M 50,300 50,319.854793653173 100,319.854793653173 100,300 " />
+          </path>
+          <path fill="white" d="M 50,300 50,350 69.85479365317298,350 69.85479365317298,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 50,300 50,350 69.85479365317298,350 69.85479365317298,300 ; M 50,300 50,350 50,350 50,300 ; M 50,300 50,350 69.85479365317298,350 69.85479365317298,300 " />
+          </path>
+          <path fill="white" d="M 92.05808253873082,300 100,300 100,350 92.05808253873082,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 92.05808253873082,300 100,300 100,350 92.05808253873082,350 ; M 100,300 100,300 100,350 100,350 ; M 92.05808253873082,300 100,300 100,350 92.05808253873082,350 " />
+          </path>
+          <path fill="white" d="M 50,350 50,373.21509910846976 100,373.21509910846976 100,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 50,350 50,373.21509910846976 100,373.21509910846976 100,350 ; M 50,350 50,350 100,350 100,350 ; M 50,350 50,373.21509910846976 100,373.21509910846976 100,350 " />
+          </path>
+          <path fill="white" d="M 50,350 50,400 73.21509910846976,400 73.21509910846976,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 50,350 50,400 73.21509910846976,400 73.21509910846976,350 ; M 50,350 50,400 50,400 50,350 ; M 50,350 50,400 73.21509910846976,400 73.21509910846976,350 " />
+          </path>
+          <path fill="white" d="M 90.71396035661209,350 100,350 100,400 90.71396035661209,400 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 90.71396035661209,350 100,350 100,400 90.71396035661209,400 ; M 100,350 100,350 100,400 100,400 ; M 90.71396035661209,350 100,350 100,400 90.71396035661209,400 " />
+          </path>
+          <path fill="white" d="M 100,0 100,14.315553780569754 150,14.315553780569754 150,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 100,0 100,14.315553780569754 150,14.315553780569754 150,0 ; M 100,0 100,0 150,0 150,0 ; M 100,0 100,14.315553780569754 150,14.315553780569754 150,0 " />
+          </path>
+          <path fill="white" d="M 100,0 100,50 114.31555378056976,50 114.31555378056976,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 100,0 100,50 114.31555378056976,50 114.31555378056976,0 ; M 100,0 100,50 100,50 100,0 ; M 100,0 100,50 114.31555378056976,50 114.31555378056976,0 " />
+          </path>
+          <path fill="white" d="M 144.2737784877721,0 150,0 150,50 144.2737784877721,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 144.2737784877721,0 150,0 150,50 144.2737784877721,50 ; M 150,0 150,0 150,50 150,50 ; M 144.2737784877721,0 150,0 150,50 144.2737784877721,50 " />
+          </path>
+          <path fill="white" d="M 100,50 100,63.955637628894266 150,63.955637628894266 150,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 100,50 100,63.955637628894266 150,63.955637628894266 150,50 ; M 100,50 100,50 150,50 150,50 ; M 100,50 100,63.955637628894266 150,63.955637628894266 150,50 " />
+          </path>
+          <path fill="white" d="M 100,50 100,100 113.95563762889427,100 113.95563762889427,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 100,50 100,100 113.95563762889427,100 113.95563762889427,50 ; M 100,50 100,100 100,100 100,50 ; M 100,50 100,100 113.95563762889427,100 113.95563762889427,50 " />
+          </path>
+          <path fill="white" d="M 144.4177449484423,50 150,50 150,100 144.4177449484423,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 144.4177449484423,50 150,50 150,100 144.4177449484423,100 ; M 150,50 150,50 150,100 150,100 ; M 144.4177449484423,50 150,50 150,100 144.4177449484423,100 " />
+          </path>
+          <path fill="white" d="M 100,100 100,124.94151133852478 150,124.94151133852478 150,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 100,100 100,124.94151133852478 150,124.94151133852478 150,100 ; M 100,100 100,100 150,100 150,100 ; M 100,100 100,124.94151133852478 150,124.94151133852478 150,100 " />
+          </path>
+          <path fill="white" d="M 100,100 100,150 124.94151133852478,150 124.94151133852478,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 100,100 100,150 124.94151133852478,150 124.94151133852478,100 ; M 100,100 100,150 100,150 100,100 ; M 100,100 100,150 124.94151133852478,150 124.94151133852478,100 " />
+          </path>
+          <path fill="white" d="M 140.0233954645901,100 150,100 150,150 140.0233954645901,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 140.0233954645901,100 150,100 150,150 140.0233954645901,150 ; M 150,100 150,100 150,150 150,150 ; M 140.0233954645901,100 150,100 150,150 140.0233954645901,150 " />
+          </path>
+          <path fill="white" d="M 100,150 100,166.04100381736689 150,166.04100381736689 150,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 100,150 100,166.04100381736689 150,166.04100381736689 150,150 ; M 100,150 100,150 150,150 150,150 ; M 100,150 100,166.04100381736689 150,166.04100381736689 150,150 " />
+          </path>
+          <path fill="white" d="M 100,150 100,200 116.04100381736687,200 116.04100381736687,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 100,150 100,200 116.04100381736687,200 116.04100381736687,150 ; M 100,150 100,200 100,200 100,150 ; M 100,150 100,200 116.04100381736687,200 116.04100381736687,150 " />
+          </path>
+          <path fill="white" d="M 143.58359847305326,150 150,150 150,200 143.58359847305326,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 143.58359847305326,150 150,150 150,200 143.58359847305326,200 ; M 150,150 150,150 150,200 150,200 ; M 143.58359847305326,150 150,150 150,200 143.58359847305326,200 " />
+          </path>
+          <path fill="white" d="M 100,200 100,222.81448831878808 150,222.81448831878808 150,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 100,200 100,222.81448831878808 150,222.81448831878808 150,200 ; M 100,200 100,200 150,200 150,200 ; M 100,200 100,222.81448831878808 150,222.81448831878808 150,200 " />
+          </path>
+          <path fill="white" d="M 100,200 100,250 122.81448831878808,250 122.81448831878808,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 100,200 100,250 122.81448831878808,250 122.81448831878808,200 ; M 100,200 100,250 100,250 100,200 ; M 100,200 100,250 122.81448831878808,250 122.81448831878808,200 " />
+          </path>
+          <path fill="white" d="M 140.87420467248478,200 150,200 150,250 140.87420467248478,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 140.87420467248478,200 150,200 150,250 140.87420467248478,250 ; M 150,200 150,200 150,250 150,250 ; M 140.87420467248478,200 150,200 150,250 140.87420467248478,250 " />
+          </path>
+          <path fill="white" d="M 100,250 100,274.7960412744508 150,274.7960412744508 150,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 100,250 100,274.7960412744508 150,274.7960412744508 150,250 ; M 100,250 100,250 150,250 150,250 ; M 100,250 100,274.7960412744508 150,274.7960412744508 150,250 " />
+          </path>
+          <path fill="white" d="M 100,250 100,300 124.79604127445079,300 124.79604127445079,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 100,250 100,300 124.79604127445079,300 124.79604127445079,250 ; M 100,250 100,300 100,300 100,250 ; M 100,250 100,300 124.79604127445079,300 124.79604127445079,250 " />
+          </path>
+          <path fill="white" d="M 140.08158349021969,250 150,250 150,300 140.08158349021969,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 140.08158349021969,250 150,250 150,300 140.08158349021969,300 ; M 150,250 150,250 150,300 150,300 ; M 140.08158349021969,250 150,250 150,300 140.08158349021969,300 " />
+          </path>
+          <path fill="white" d="M 100,300 100,323.8615851806185 150,323.8615851806185 150,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 100,300 100,323.8615851806185 150,323.8615851806185 150,300 ; M 100,300 100,300 150,300 150,300 ; M 100,300 100,323.8615851806185 150,323.8615851806185 150,300 " />
+          </path>
+          <path fill="white" d="M 100,300 100,350 123.86158518061848,350 123.86158518061848,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 100,300 100,350 123.86158518061848,350 123.86158518061848,300 ; M 100,300 100,350 100,350 100,300 ; M 100,300 100,350 123.86158518061848,350 123.86158518061848,300 " />
+          </path>
+          <path fill="white" d="M 140.4553659277526,300 150,300 150,350 140.4553659277526,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 140.4553659277526,300 150,300 150,350 140.4553659277526,350 ; M 150,300 150,300 150,350 150,350 ; M 140.4553659277526,300 150,300 150,350 140.4553659277526,350 " />
+          </path>
+          <path fill="white" d="M 100,350 100,372.2945404096399 150,372.2945404096399 150,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 100,350 100,372.2945404096399 150,372.2945404096399 150,350 ; M 100,350 100,350 150,350 150,350 ; M 100,350 100,372.2945404096399 150,372.2945404096399 150,350 " />
+          </path>
+          <path fill="white" d="M 100,350 100,400 122.2945404096399,400 122.2945404096399,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 100,350 100,400 122.2945404096399,400 122.2945404096399,350 ; M 100,350 100,400 100,400 100,350 ; M 100,350 100,400 122.2945404096399,400 122.2945404096399,350 " />
+          </path>
+          <path fill="white" d="M 141.08218383614405,350 150,350 150,400 141.08218383614405,400 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 141.08218383614405,350 150,350 150,400 141.08218383614405,400 ; M 150,350 150,350 150,400 150,400 ; M 141.08218383614405,350 150,350 150,400 141.08218383614405,400 " />
+          </path>
+          <path fill="white" d="M 150,0 150,18.93158769743064 200,18.93158769743064 200,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 150,0 150,18.93158769743064 200,18.93158769743064 200,0 ; M 150,0 150,0 200,0 200,0 ; M 150,0 150,18.93158769743064 200,18.93158769743064 200,0 " />
+          </path>
+          <path fill="white" d="M 150,0 150,50 168.93158769743064,50 168.93158769743064,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 150,0 150,50 168.93158769743064,50 168.93158769743064,0 ; M 150,0 150,50 150,50 150,0 ; M 150,0 150,50 168.93158769743064,50 168.93158769743064,0 " />
+          </path>
+          <path fill="white" d="M 192.42736492102773,0 200,0 200,50 192.42736492102773,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="6s" keyTimes="0;0.5;1"
+              values="M 192.42736492102773,0 200,0 200,50 192.42736492102773,50 ; M 200,0 200,0 200,50 200,50 ; M 192.42736492102773,0 200,0 200,50 192.42736492102773,50 " />
+          </path>
+          <path fill="white" d="M 150,50 150,68.92372728100354 200,68.92372728100354 200,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 150,50 150,68.92372728100354 200,68.92372728100354 200,50 ; M 150,50 150,50 200,50 200,50 ; M 150,50 150,68.92372728100354 200,68.92372728100354 200,50 " />
+          </path>
+          <path fill="white" d="M 150,50 150,100 168.92372728100355,100 168.92372728100355,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 150,50 150,100 168.92372728100355,100 168.92372728100355,50 ; M 150,50 150,100 150,100 150,50 ; M 150,50 150,100 168.92372728100355,100 168.92372728100355,50 " />
+          </path>
+          <path fill="white" d="M 192.43050908759858,50 200,50 200,100 192.43050908759858,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 192.43050908759858,50 200,50 200,100 192.43050908759858,100 ; M 200,50 200,50 200,100 200,100 ; M 192.43050908759858,50 200,50 200,100 192.43050908759858,100 " />
+          </path>
+          <path fill="white" d="M 150,100 150,123.40985104625426 200,123.40985104625426 200,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 150,100 150,123.40985104625426 200,123.40985104625426 200,100 ; M 150,100 150,100 200,100 200,100 ; M 150,100 150,123.40985104625426 200,123.40985104625426 200,100 " />
+          </path>
+          <path fill="white" d="M 150,100 150,150 173.40985104625426,150 173.40985104625426,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 150,100 150,150 173.40985104625426,150 173.40985104625426,100 ; M 150,100 150,150 150,150 150,100 ; M 150,100 150,150 173.40985104625426,150 173.40985104625426,100 " />
+          </path>
+          <path fill="white" d="M 190.6360595814983,100 200,100 200,150 190.6360595814983,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 190.6360595814983,100 200,100 200,150 190.6360595814983,150 ; M 200,100 200,100 200,150 200,150 ; M 190.6360595814983,100 200,100 200,150 190.6360595814983,150 " />
+          </path>
+          <path fill="white" d="M 150,150 150,163.1216063490529 200,163.1216063490529 200,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 150,150 150,163.1216063490529 200,163.1216063490529 200,150 ; M 150,150 150,150 200,150 200,150 ; M 150,150 150,163.1216063490529 200,163.1216063490529 200,150 " />
+          </path>
+          <path fill="white" d="M 150,150 150,200 163.1216063490529,200 163.1216063490529,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 150,150 150,200 163.1216063490529,200 163.1216063490529,150 ; M 150,150 150,200 150,200 150,150 ; M 150,150 150,200 163.1216063490529,200 163.1216063490529,150 " />
+          </path>
+          <path fill="white" d="M 194.75135746037884,150 200,150 200,200 194.75135746037884,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 194.75135746037884,150 200,150 200,200 194.75135746037884,200 ; M 200,150 200,150 200,200 200,200 ; M 194.75135746037884,150 200,150 200,200 194.75135746037884,200 " />
+          </path>
+          <path fill="white" d="M 150,200 150,214.91933444616328 200,214.91933444616328 200,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 150,200 150,214.91933444616328 200,214.91933444616328 200,200 ; M 150,200 150,200 200,200 200,200 ; M 150,200 150,214.91933444616328 200,214.91933444616328 200,200 " />
+          </path>
+          <path fill="white" d="M 150,200 150,250 164.91933444616328,250 164.91933444616328,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 150,200 150,250 164.91933444616328,250 164.91933444616328,200 ; M 150,200 150,250 150,250 150,200 ; M 150,200 150,250 164.91933444616328,250 164.91933444616328,200 " />
+          </path>
+          <path fill="white" d="M 194.03226622153468,200 200,200 200,250 194.03226622153468,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 194.03226622153468,200 200,200 200,250 194.03226622153468,250 ; M 200,200 200,200 200,250 200,250 ; M 194.03226622153468,200 200,200 200,250 194.03226622153468,250 " />
+          </path>
+          <path fill="white" d="M 150,250 150,264.2912126908856 200,264.2912126908856 200,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 150,250 150,264.2912126908856 200,264.2912126908856 200,250 ; M 150,250 150,250 200,250 200,250 ; M 150,250 150,264.2912126908856 200,264.2912126908856 200,250 " />
+          </path>
+          <path fill="white" d="M 150,250 150,300 164.29121269088554,300 164.29121269088554,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 150,250 150,300 164.29121269088554,300 164.29121269088554,250 ; M 150,250 150,300 150,300 150,250 ; M 150,250 150,300 164.29121269088554,300 164.29121269088554,250 " />
+          </path>
+          <path fill="white" d="M 194.28351492364578,250 200,250 200,300 194.28351492364578,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 194.28351492364578,250 200,250 200,300 194.28351492364578,300 ; M 200,250 200,250 200,300 200,300 ; M 194.28351492364578,250 200,250 200,300 194.28351492364578,300 " />
+          </path>
+          <path fill="white" d="M 150,300 150,324.4745097941698 200,324.4745097941698 200,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 150,300 150,324.4745097941698 200,324.4745097941698 200,300 ; M 150,300 150,300 200,300 200,300 ; M 150,300 150,324.4745097941698 200,324.4745097941698 200,300 " />
+          </path>
+          <path fill="white" d="M 150,300 150,350 174.47450979416985,350 174.47450979416985,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 150,300 150,350 174.47450979416985,350 174.47450979416985,300 ; M 150,300 150,350 150,350 150,300 ; M 150,300 150,350 174.47450979416985,350 174.47450979416985,300 " />
+          </path>
+          <path fill="white" d="M 190.21019608233206,300 200,300 200,350 190.21019608233206,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 190.21019608233206,300 200,300 200,350 190.21019608233206,350 ; M 200,300 200,300 200,350 200,350 ; M 190.21019608233206,300 200,300 200,350 190.21019608233206,350 " />
+          </path>
+          <path fill="white" d="M 150,350 150,364.2857746806499 200,364.2857746806499 200,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 150,350 150,364.2857746806499 200,364.2857746806499 200,350 ; M 150,350 150,350 200,350 200,350 ; M 150,350 150,364.2857746806499 200,364.2857746806499 200,350 " />
+          </path>
+          <path fill="white" d="M 150,350 150,400 164.28577468064995,400 164.28577468064995,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 150,350 150,400 164.28577468064995,400 164.28577468064995,350 ; M 150,350 150,400 150,400 150,350 ; M 150,350 150,400 164.28577468064995,400 164.28577468064995,350 " />
+          </path>
+          <path fill="white" d="M 194.28569012774003,350 200,350 200,400 194.28569012774003,400 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 194.28569012774003,350 200,350 200,400 194.28569012774003,400 ; M 200,350 200,350 200,400 200,400 ; M 194.28569012774003,350 200,350 200,400 194.28569012774003,400 " />
+          </path>
+          <path fill="white" d="M 200,0 200,16.17341493876047 250,16.17341493876047 250,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 200,0 200,16.17341493876047 250,16.17341493876047 250,0 ; M 200,0 200,0 250,0 250,0 ; M 200,0 200,16.17341493876047 250,16.17341493876047 250,0 " />
+          </path>
+          <path fill="white" d="M 200,0 200,50 216.17341493876046,50 216.17341493876046,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 200,0 200,50 216.17341493876046,50 216.17341493876046,0 ; M 200,0 200,50 200,50 200,0 ; M 200,0 200,50 216.17341493876046,50 216.17341493876046,0 " />
+          </path>
+          <path fill="white" d="M 243.5306340244958,0 250,0 250,50 243.5306340244958,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 243.5306340244958,0 250,0 250,50 243.5306340244958,50 ; M 250,0 250,0 250,50 250,50 ; M 243.5306340244958,0 250,0 250,50 243.5306340244958,50 " />
+          </path>
+          <path fill="white" d="M 200,50 200,74.01833991134652 250,74.01833991134652 250,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 200,50 200,74.01833991134652 250,74.01833991134652 250,50 ; M 200,50 200,50 250,50 250,50 ; M 200,50 200,74.01833991134652 250,74.01833991134652 250,50 " />
+          </path>
+          <path fill="white" d="M 200,50 200,100 224.01833991134652,100 224.01833991134652,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 200,50 200,100 224.01833991134652,100 224.01833991134652,50 ; M 200,50 200,100 200,100 200,50 ; M 200,50 200,100 224.01833991134652,100 224.01833991134652,50 " />
+          </path>
+          <path fill="white" d="M 240.3926640354614,50 250,50 250,100 240.3926640354614,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 240.3926640354614,50 250,50 250,100 240.3926640354614,100 ; M 250,50 250,50 250,100 250,100 ; M 240.3926640354614,50 250,50 250,100 240.3926640354614,100 " />
+          </path>
+          <path fill="white" d="M 200,100 200,124.23920735963856 250,124.23920735963856 250,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 200,100 200,124.23920735963856 250,124.23920735963856 250,100 ; M 200,100 200,100 250,100 250,100 ; M 200,100 200,124.23920735963856 250,124.23920735963856 250,100 " />
+          </path>
+          <path fill="white" d="M 200,100 200,150 224.23920735963856,150 224.23920735963856,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 200,100 200,150 224.23920735963856,150 224.23920735963856,100 ; M 200,100 200,150 200,150 200,100 ; M 200,100 200,150 224.23920735963856,150 224.23920735963856,100 " />
+          </path>
+          <path fill="white" d="M 240.30431705614458,100 250,100 250,150 240.30431705614458,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 240.30431705614458,100 250,100 250,150 240.30431705614458,150 ; M 250,100 250,100 250,150 250,150 ; M 240.30431705614458,100 250,100 250,150 240.30431705614458,150 " />
+          </path>
+          <path fill="white" d="M 200,150 200,168.1892297157225 250,168.1892297157225 250,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 200,150 200,168.1892297157225 250,168.1892297157225 250,150 ; M 200,150 200,150 250,150 250,150 ; M 200,150 200,168.1892297157225 250,168.1892297157225 250,150 " />
+          </path>
+          <path fill="white" d="M 200,150 200,200 218.1892297157225,200 218.1892297157225,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 200,150 200,200 218.1892297157225,200 218.1892297157225,150 ; M 200,150 200,200 200,200 200,150 ; M 200,150 200,200 218.1892297157225,200 218.1892297157225,150 " />
+          </path>
+          <path fill="white" d="M 242.724308113711,150 250,150 250,200 242.724308113711,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 242.724308113711,150 250,150 250,200 242.724308113711,200 ; M 250,150 250,150 250,200 250,200 ; M 242.724308113711,150 250,150 250,200 242.724308113711,200 " />
+          </path>
+          <path fill="white" d="M 200,200 200,218.62440647425953 250,218.62440647425953 250,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 200,200 200,218.62440647425953 250,218.62440647425953 250,200 ; M 200,200 200,200 250,200 250,200 ; M 200,200 200,218.62440647425953 250,218.62440647425953 250,200 " />
+          </path>
+          <path fill="white" d="M 200,200 200,250 218.62440647425953,250 218.62440647425953,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 200,200 200,250 218.62440647425953,250 218.62440647425953,200 ; M 200,200 200,250 200,250 200,200 ; M 200,200 200,250 218.62440647425953,250 218.62440647425953,200 " />
+          </path>
+          <path fill="white" d="M 242.5502374102962,200 250,200 250,250 242.5502374102962,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 242.5502374102962,200 250,200 250,250 242.5502374102962,250 ; M 250,200 250,200 250,250 250,250 ; M 242.5502374102962,200 250,200 250,250 242.5502374102962,250 " />
+          </path>
+          <path fill="white" d="M 200,250 200,269.9181635311776 250,269.9181635311776 250,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 200,250 200,269.9181635311776 250,269.9181635311776 250,250 ; M 200,250 200,250 250,250 250,250 ; M 200,250 200,269.9181635311776 250,269.9181635311776 250,250 " />
+          </path>
+          <path fill="white" d="M 200,250 200,300 219.91816353117756,300 219.91816353117756,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 200,250 200,300 219.91816353117756,300 219.91816353117756,250 ; M 200,250 200,300 200,300 200,250 ; M 200,250 200,300 219.91816353117756,300 219.91816353117756,250 " />
+          </path>
+          <path fill="white" d="M 242.03273458752898,250 250,250 250,300 242.03273458752898,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 242.03273458752898,250 250,250 250,300 242.03273458752898,300 ; M 250,250 250,250 250,300 250,300 ; M 242.03273458752898,250 250,250 250,300 242.03273458752898,300 " />
+          </path>
+          <path fill="white" d="M 200,300 200,321.3971300228156 250,321.3971300228156 250,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 200,300 200,321.3971300228156 250,321.3971300228156 250,300 ; M 200,300 200,300 250,300 250,300 ; M 200,300 200,321.3971300228156 250,321.3971300228156 250,300 " />
+          </path>
+          <path fill="white" d="M 200,300 200,350 221.39713002281556,350 221.39713002281556,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 200,300 200,350 221.39713002281556,350 221.39713002281556,300 ; M 200,300 200,350 200,350 200,300 ; M 200,300 200,350 221.39713002281556,350 221.39713002281556,300 " />
+          </path>
+          <path fill="white" d="M 241.4411479908738,300 250,300 250,350 241.4411479908738,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 241.4411479908738,300 250,300 250,350 241.4411479908738,350 ; M 250,300 250,300 250,350 250,350 ; M 241.4411479908738,300 250,300 250,350 241.4411479908738,350 " />
+          </path>
+          <path fill="white" d="M 200,350 200,373.1055029150791 250,373.1055029150791 250,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 200,350 200,373.1055029150791 250,373.1055029150791 250,350 ; M 200,350 200,350 250,350 250,350 ; M 200,350 200,373.1055029150791 250,373.1055029150791 250,350 " />
+          </path>
+          <path fill="white" d="M 200,350 200,400 223.1055029150791,400 223.1055029150791,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 200,350 200,400 223.1055029150791,400 223.1055029150791,350 ; M 200,350 200,400 200,400 200,350 ; M 200,350 200,400 223.1055029150791,400 223.1055029150791,350 " />
+          </path>
+          <path fill="white" d="M 240.75779883396837,350 250,350 250,400 240.75779883396837,400 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="11s" keyTimes="0;0.5;1"
+              values="M 240.75779883396837,350 250,350 250,400 240.75779883396837,400 ; M 250,350 250,350 250,400 250,400 ; M 240.75779883396837,350 250,350 250,400 240.75779883396837,400 " />
+          </path>
+          <path fill="white" d="M 250,0 250,20.738891679282467 300,20.738891679282467 300,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 250,0 250,20.738891679282467 300,20.738891679282467 300,0 ; M 250,0 250,0 300,0 300,0 ; M 250,0 250,20.738891679282467 300,20.738891679282467 300,0 " />
+          </path>
+          <path fill="white" d="M 250,0 250,50 270.73889167928246,50 270.73889167928246,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 250,0 250,50 270.73889167928246,50 270.73889167928246,0 ; M 250,0 250,50 250,50 250,0 ; M 250,0 250,50 270.73889167928246,50 270.73889167928246,0 " />
+          </path>
+          <path fill="white" d="M 291.704443328287,0 300,0 300,50 291.704443328287,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 291.704443328287,0 300,0 300,50 291.704443328287,50 ; M 300,0 300,0 300,50 300,50 ; M 291.704443328287,0 300,0 300,50 291.704443328287,50 " />
+          </path>
+          <path fill="white" d="M 250,50 250,62.57068272841667 300,62.57068272841667 300,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 250,50 250,62.57068272841667 300,62.57068272841667 300,50 ; M 250,50 250,50 300,50 300,50 ; M 250,50 250,62.57068272841667 300,62.57068272841667 300,50 " />
+          </path>
+          <path fill="white" d="M 250,50 250,100 262.57068272841667,100 262.57068272841667,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 250,50 250,100 262.57068272841667,100 262.57068272841667,50 ; M 250,50 250,100 250,100 250,50 ; M 250,50 250,100 262.57068272841667,100 262.57068272841667,50 " />
+          </path>
+          <path fill="white" d="M 294.97172690863334,50 300,50 300,100 294.97172690863334,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 294.97172690863334,50 300,50 300,100 294.97172690863334,100 ; M 300,50 300,50 300,100 300,100 ; M 294.97172690863334,50 300,50 300,100 294.97172690863334,100 " />
+          </path>
+          <path fill="white" d="M 250,100 250,119.28613559267124 300,119.28613559267124 300,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 250,100 250,119.28613559267124 300,119.28613559267124 300,100 ; M 250,100 250,100 300,100 300,100 ; M 250,100 250,119.28613559267124 300,119.28613559267124 300,100 " />
+          </path>
+          <path fill="white" d="M 250,100 250,150 269.28613559267126,150 269.28613559267126,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 250,100 250,150 269.28613559267126,150 269.28613559267126,100 ; M 250,100 250,150 250,150 250,100 ; M 250,100 250,150 269.28613559267126,150 269.28613559267126,100 " />
+          </path>
+          <path fill="white" d="M 292.2855457629315,100 300,100 300,150 292.2855457629315,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 292.2855457629315,100 300,100 300,150 292.2855457629315,150 ; M 300,100 300,100 300,150 300,150 ; M 292.2855457629315,100 300,100 300,150 292.2855457629315,150 " />
+          </path>
+          <path fill="white" d="M 250,150 250,171.27444014168847 300,171.27444014168847 300,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 250,150 250,171.27444014168847 300,171.27444014168847 300,150 ; M 250,150 250,150 300,150 300,150 ; M 250,150 250,171.27444014168847 300,171.27444014168847 300,150 " />
+          </path>
+          <path fill="white" d="M 250,150 250,200 271.27444014168844,200 271.27444014168844,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 250,150 250,200 271.27444014168844,200 271.27444014168844,150 ; M 250,150 250,200 250,200 250,150 ; M 250,150 250,200 271.27444014168844,200 271.27444014168844,150 " />
+          </path>
+          <path fill="white" d="M 291.4902239433246,150 300,150 300,200 291.4902239433246,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 291.4902239433246,150 300,150 300,200 291.4902239433246,200 ; M 300,150 300,150 300,200 300,200 ; M 291.4902239433246,150 300,150 300,200 291.4902239433246,200 " />
+          </path>
+          <path fill="white" d="M 250,200 250,215.24744133333354 300,215.24744133333354 300,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 250,200 250,215.24744133333354 300,215.24744133333354 300,200 ; M 250,200 250,200 300,200 300,200 ; M 250,200 250,215.24744133333354 300,215.24744133333354 300,200 " />
+          </path>
+          <path fill="white" d="M 250,200 250,250 265.24744133333354,250 265.24744133333354,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 250,200 250,250 265.24744133333354,250 265.24744133333354,200 ; M 250,200 250,250 250,250 250,200 ; M 250,200 250,250 265.24744133333354,250 265.24744133333354,200 " />
+          </path>
+          <path fill="white" d="M 293.9010234666666,200 300,200 300,250 293.9010234666666,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 293.9010234666666,200 300,200 300,250 293.9010234666666,250 ; M 300,200 300,200 300,250 300,250 ; M 293.9010234666666,200 300,200 300,250 293.9010234666666,250 " />
+          </path>
+          <path fill="white" d="M 250,250 250,274.4958696736378 300,274.4958696736378 300,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 250,250 250,274.4958696736378 300,274.4958696736378 300,250 ; M 250,250 250,250 300,250 300,250 ; M 250,250 250,274.4958696736378 300,274.4958696736378 300,250 " />
+          </path>
+          <path fill="white" d="M 250,250 250,300 274.4958696736378,300 274.4958696736378,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 250,250 250,300 274.4958696736378,300 274.4958696736378,250 ; M 250,250 250,300 250,300 250,250 ; M 250,250 250,300 274.4958696736378,300 274.4958696736378,250 " />
+          </path>
+          <path fill="white" d="M 290.2016521305449,250 300,250 300,300 290.2016521305449,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 290.2016521305449,250 300,250 300,300 290.2016521305449,300 ; M 300,250 300,250 300,300 300,300 ; M 290.2016521305449,250 300,250 300,300 290.2016521305449,300 " />
+          </path>
+          <path fill="white" d="M 250,300 250,319.58877618760306 300,319.58877618760306 300,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 250,300 250,319.58877618760306 300,319.58877618760306 300,300 ; M 250,300 250,300 300,300 300,300 ; M 250,300 250,319.58877618760306 300,319.58877618760306 300,300 " />
+          </path>
+          <path fill="white" d="M 250,300 250,350 269.58877618760306,350 269.58877618760306,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 250,300 250,350 269.58877618760306,350 269.58877618760306,300 ; M 250,300 250,350 250,350 250,300 ; M 250,300 250,350 269.58877618760306,350 269.58877618760306,300 " />
+          </path>
+          <path fill="white" d="M 292.16448952495875,300 300,300 300,350 292.16448952495875,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 292.16448952495875,300 300,300 300,350 292.16448952495875,350 ; M 300,300 300,300 300,350 300,350 ; M 292.16448952495875,300 300,300 300,350 292.16448952495875,350 " />
+          </path>
+          <path fill="white" d="M 250,350 250,366.18792266882093 300,366.18792266882093 300,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 250,350 250,366.18792266882093 300,366.18792266882093 300,350 ; M 250,350 250,350 300,350 300,350 ; M 250,350 250,366.18792266882093 300,366.18792266882093 300,350 " />
+          </path>
+          <path fill="white" d="M 250,350 250,400 266.18792266882093,400 266.18792266882093,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 250,350 250,400 266.18792266882093,400 266.18792266882093,350 ; M 250,350 250,400 250,400 250,350 ; M 250,350 250,400 266.18792266882093,400 266.18792266882093,350 " />
+          </path>
+          <path fill="white" d="M 293.5248309324716,350 300,350 300,400 293.5248309324716,400 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 293.5248309324716,350 300,350 300,400 293.5248309324716,400 ; M 300,350 300,350 300,400 300,400 ; M 293.5248309324716,350 300,350 300,400 293.5248309324716,400 " />
+          </path>
+          <path fill="white" d="M 300,0 300,24.978480895092158 350,24.978480895092158 350,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 300,0 300,24.978480895092158 350,24.978480895092158 350,0 ; M 300,0 300,0 350,0 350,0 ; M 300,0 300,24.978480895092158 350,24.978480895092158 350,0 " />
+          </path>
+          <path fill="white" d="M 300,0 300,50 324.97848089509216,50 324.97848089509216,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 300,0 300,50 324.97848089509216,50 324.97848089509216,0 ; M 300,0 300,50 300,50 300,0 ; M 300,0 300,50 324.97848089509216,50 324.97848089509216,0 " />
+          </path>
+          <path fill="white" d="M 340.0086076419631,0 350,0 350,50 340.0086076419631,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 340.0086076419631,0 350,0 350,50 340.0086076419631,50 ; M 350,0 350,0 350,50 350,50 ; M 340.0086076419631,0 350,0 350,50 340.0086076419631,50 " />
+          </path>
+          <path fill="white" d="M 300,50 300,74.9780330273658 350,74.9780330273658 350,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 300,50 300,74.9780330273658 350,74.9780330273658 350,50 ; M 300,50 300,50 350,50 350,50 ; M 300,50 300,74.9780330273658 350,74.9780330273658 350,50 " />
+          </path>
+          <path fill="white" d="M 300,50 300,100 324.9780330273658,100 324.9780330273658,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 300,50 300,100 324.9780330273658,100 324.9780330273658,50 ; M 300,50 300,100 300,100 300,50 ; M 300,50 300,100 324.9780330273658,100 324.9780330273658,50 " />
+          </path>
+          <path fill="white" d="M 340.00878678905366,50 350,50 350,100 340.00878678905366,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 340.00878678905366,50 350,50 350,100 340.00878678905366,100 ; M 350,50 350,50 350,100 350,100 ; M 340.00878678905366,50 350,50 350,100 340.00878678905366,100 " />
+          </path>
+          <path fill="white" d="M 300,100 300,123.35803193254553 350,123.35803193254553 350,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 300,100 300,123.35803193254553 350,123.35803193254553 350,100 ; M 300,100 300,100 350,100 350,100 ; M 300,100 300,123.35803193254553 350,123.35803193254553 350,100 " />
+          </path>
+          <path fill="white" d="M 300,100 300,150 323.35803193254554,150 323.35803193254554,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 300,100 300,150 323.35803193254554,150 323.35803193254554,100 ; M 300,100 300,150 300,150 300,100 ; M 300,100 300,150 323.35803193254554,150 323.35803193254554,100 " />
+          </path>
+          <path fill="white" d="M 340.6567872269818,100 350,100 350,150 340.6567872269818,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 340.6567872269818,100 350,100 350,150 340.6567872269818,150 ; M 350,100 350,100 350,150 350,150 ; M 340.6567872269818,100 350,100 350,150 340.6567872269818,150 " />
+          </path>
+          <path fill="white" d="M 300,150 300,168.62180150805406 350,168.62180150805406 350,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 300,150 300,168.62180150805406 350,168.62180150805406 350,150 ; M 300,150 300,150 350,150 350,150 ; M 300,150 300,168.62180150805406 350,168.62180150805406 350,150 " />
+          </path>
+          <path fill="white" d="M 300,150 300,200 318.62180150805403,200 318.62180150805403,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 300,150 300,200 318.62180150805403,200 318.62180150805403,150 ; M 300,150 300,200 300,200 300,150 ; M 300,150 300,200 318.62180150805403,200 318.62180150805403,150 " />
+          </path>
+          <path fill="white" d="M 342.5512793967784,150 350,150 350,200 342.5512793967784,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 342.5512793967784,150 350,150 350,200 342.5512793967784,200 ; M 350,150 350,150 350,200 350,200 ; M 342.5512793967784,150 350,150 350,200 342.5512793967784,200 " />
+          </path>
+          <path fill="white" d="M 300,200 300,220.07632347332904 350,220.07632347332904 350,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 300,200 300,220.07632347332904 350,220.07632347332904 350,200 ; M 300,200 300,200 350,200 350,200 ; M 300,200 300,220.07632347332904 350,220.07632347332904 350,200 " />
+          </path>
+          <path fill="white" d="M 300,200 300,250 320.07632347332907,250 320.07632347332907,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 300,200 300,250 320.07632347332907,250 320.07632347332907,200 ; M 300,200 300,250 300,250 300,200 ; M 300,200 300,250 320.07632347332907,250 320.07632347332907,200 " />
+          </path>
+          <path fill="white" d="M 341.9694706106684,200 350,200 350,250 341.9694706106684,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 341.9694706106684,200 350,200 350,250 341.9694706106684,250 ; M 350,200 350,200 350,250 350,250 ; M 341.9694706106684,200 350,200 350,250 341.9694706106684,250 " />
+          </path>
+          <path fill="white" d="M 300,250 300,269.5213992063681 350,269.5213992063681 350,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 300,250 300,269.5213992063681 350,269.5213992063681 350,250 ; M 300,250 300,250 350,250 350,250 ; M 300,250 300,269.5213992063681 350,269.5213992063681 350,250 " />
+          </path>
+          <path fill="white" d="M 300,250 300,300 319.5213992063681,300 319.5213992063681,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 300,250 300,300 319.5213992063681,300 319.5213992063681,250 ; M 300,250 300,300 300,300 300,250 ; M 300,250 300,300 319.5213992063681,300 319.5213992063681,250 " />
+          </path>
+          <path fill="white" d="M 342.19144031745276,250 350,250 350,300 342.19144031745276,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="7s" keyTimes="0;0.5;1"
+              values="M 342.19144031745276,250 350,250 350,300 342.19144031745276,300 ; M 350,250 350,250 350,300 350,300 ; M 342.19144031745276,250 350,250 350,300 342.19144031745276,300 " />
+          </path>
+          <path fill="white" d="M 300,300 300,314.31053305173435 350,314.31053305173435 350,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 300,300 300,314.31053305173435 350,314.31053305173435 350,300 ; M 300,300 300,300 350,300 350,300 ; M 300,300 300,314.31053305173435 350,314.31053305173435 350,300 " />
+          </path>
+          <path fill="white" d="M 300,300 300,350 314.31053305173435,350 314.31053305173435,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 300,300 300,350 314.31053305173435,350 314.31053305173435,300 ; M 300,300 300,350 300,350 300,300 ; M 300,300 300,350 314.31053305173435,350 314.31053305173435,300 " />
+          </path>
+          <path fill="white" d="M 344.27578677930626,300 350,300 350,350 344.27578677930626,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 344.27578677930626,300 350,300 350,350 344.27578677930626,350 ; M 350,300 350,300 350,350 350,350 ; M 344.27578677930626,300 350,300 350,350 344.27578677930626,350 " />
+          </path>
+          <path fill="white" d="M 300,350 300,366.6011485160174 350,366.6011485160174 350,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 300,350 300,366.6011485160174 350,366.6011485160174 350,350 ; M 300,350 300,350 350,350 350,350 ; M 300,350 300,366.6011485160174 350,366.6011485160174 350,350 " />
+          </path>
+          <path fill="white" d="M 300,350 300,400 316.6011485160174,400 316.6011485160174,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 300,350 300,400 316.6011485160174,400 316.6011485160174,350 ; M 300,350 300,400 300,400 300,350 ; M 300,350 300,400 316.6011485160174,400 316.6011485160174,350 " />
+          </path>
+          <path fill="white" d="M 343.359540593593,350 350,350 350,400 343.359540593593,400 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 343.359540593593,350 350,350 350,400 343.359540593593,400 ; M 350,350 350,350 350,400 350,400 ; M 343.359540593593,350 350,350 350,400 343.359540593593,400 " />
+          </path>
+          <path fill="white" d="M 350,0 350,23.54034654575407 400,23.54034654575407 400,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 350,0 350,23.54034654575407 400,23.54034654575407 400,0 ; M 350,0 350,0 400,0 400,0 ; M 350,0 350,23.54034654575407 400,23.54034654575407 400,0 " />
+          </path>
+          <path fill="white" d="M 350,0 350,50 373.54034654575406,50 373.54034654575406,0 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 350,0 350,50 373.54034654575406,50 373.54034654575406,0 ; M 350,0 350,50 350,50 350,0 ; M 350,0 350,50 373.54034654575406,50 373.54034654575406,0 " />
+          </path>
+          <path fill="white" d="M 390.5838613816984,0 400,0 400,50 390.5838613816984,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="12s" keyTimes="0;0.5;1"
+              values="M 390.5838613816984,0 400,0 400,50 390.5838613816984,50 ; M 400,0 400,0 400,50 400,50 ; M 390.5838613816984,0 400,0 400,50 390.5838613816984,50 " />
+          </path>
+          <path fill="white" d="M 350,50 350,65.34311165199878 400,65.34311165199878 400,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 350,50 350,65.34311165199878 400,65.34311165199878 400,50 ; M 350,50 350,50 400,50 400,50 ; M 350,50 350,65.34311165199878 400,65.34311165199878 400,50 " />
+          </path>
+          <path fill="white" d="M 350,50 350,100 365.34311165199875,100 365.34311165199875,50 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 350,50 350,100 365.34311165199875,100 365.34311165199875,50 ; M 350,50 350,100 350,100 350,50 ; M 350,50 350,100 365.34311165199875,100 365.34311165199875,50 " />
+          </path>
+          <path fill="white" d="M 393.8627553392005,50 400,50 400,100 393.8627553392005,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="14s" keyTimes="0;0.5;1"
+              values="M 393.8627553392005,50 400,50 400,100 393.8627553392005,100 ; M 400,50 400,50 400,100 400,100 ; M 393.8627553392005,50 400,50 400,100 393.8627553392005,100 " />
+          </path>
+          <path fill="white" d="M 350,100 350,113.20771906129512 400,113.20771906129512 400,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 350,100 350,113.20771906129512 400,113.20771906129512 400,100 ; M 350,100 350,100 400,100 400,100 ; M 350,100 350,113.20771906129512 400,113.20771906129512 400,100 " />
+          </path>
+          <path fill="white" d="M 350,100 350,150 363.2077190612951,150 363.2077190612951,100 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 350,100 350,150 363.2077190612951,150 363.2077190612951,100 ; M 350,100 350,150 350,150 350,100 ; M 350,100 350,150 363.2077190612951,150 363.2077190612951,100 " />
+          </path>
+          <path fill="white" d="M 394.71691237548197,100 400,100 400,150 394.71691237548197,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="15s" keyTimes="0;0.5;1"
+              values="M 394.71691237548197,100 400,100 400,150 394.71691237548197,150 ; M 400,100 400,100 400,150 400,150 ; M 394.71691237548197,100 400,100 400,150 394.71691237548197,150 " />
+          </path>
+          <path fill="white" d="M 350,150 350,171.98538763722703 400,171.98538763722703 400,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 350,150 350,171.98538763722703 400,171.98538763722703 400,150 ; M 350,150 350,150 400,150 400,150 ; M 350,150 350,171.98538763722703 400,171.98538763722703 400,150 " />
+          </path>
+          <path fill="white" d="M 350,150 350,200 371.98538763722706,200 371.98538763722706,150 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 350,150 350,200 371.98538763722706,200 371.98538763722706,150 ; M 350,150 350,200 350,200 350,150 ; M 350,150 350,200 371.98538763722706,200 371.98538763722706,150 " />
+          </path>
+          <path fill="white" d="M 391.20584494510916,150 400,150 400,200 391.20584494510916,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="10s" keyTimes="0;0.5;1"
+              values="M 391.20584494510916,150 400,150 400,200 391.20584494510916,200 ; M 400,150 400,150 400,200 400,200 ; M 391.20584494510916,150 400,150 400,200 391.20584494510916,200 " />
+          </path>
+          <path fill="white" d="M 350,200 350,218.665454647629 400,218.665454647629 400,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 350,200 350,218.665454647629 400,218.665454647629 400,200 ; M 350,200 350,200 400,200 400,200 ; M 350,200 350,218.665454647629 400,218.665454647629 400,200 " />
+          </path>
+          <path fill="white" d="M 350,200 350,250 368.66545464762896,250 368.66545464762896,200 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 350,200 350,250 368.66545464762896,250 368.66545464762896,200 ; M 350,200 350,250 350,250 350,200 ; M 350,200 350,250 368.66545464762896,250 368.66545464762896,200 " />
+          </path>
+          <path fill="white" d="M 392.5338181409484,200 400,200 400,250 392.5338181409484,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="5s" keyTimes="0;0.5;1"
+              values="M 392.5338181409484,200 400,200 400,250 392.5338181409484,250 ; M 400,200 400,200 400,250 400,250 ; M 392.5338181409484,200 400,200 400,250 392.5338181409484,250 " />
+          </path>
+          <path fill="white" d="M 350,250 350,262.57554898805904 400,262.57554898805904 400,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 350,250 350,262.57554898805904 400,262.57554898805904 400,250 ; M 350,250 350,250 400,250 400,250 ; M 350,250 350,262.57554898805904 400,262.57554898805904 400,250 " />
+          </path>
+          <path fill="white" d="M 350,250 350,300 362.57554898805904,300 362.57554898805904,250 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 350,250 350,300 362.57554898805904,300 362.57554898805904,250 ; M 350,250 350,300 350,300 350,250 ; M 350,250 350,300 362.57554898805904,300 362.57554898805904,250 " />
+          </path>
+          <path fill="white" d="M 394.9697804047764,250 400,250 400,300 394.9697804047764,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="13s" keyTimes="0;0.5;1"
+              values="M 394.9697804047764,250 400,250 400,300 394.9697804047764,300 ; M 400,250 400,250 400,300 400,300 ; M 394.9697804047764,250 400,250 400,300 394.9697804047764,300 " />
+          </path>
+          <path fill="white" d="M 350,300 350,317.1518980514384 400,317.1518980514384 400,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 350,300 350,317.1518980514384 400,317.1518980514384 400,300 ; M 350,300 350,300 400,300 400,300 ; M 350,300 350,317.1518980514384 400,317.1518980514384 400,300 " />
+          </path>
+          <path fill="white" d="M 350,300 350,350 367.1518980514384,350 367.1518980514384,300 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 350,300 350,350 367.1518980514384,350 367.1518980514384,300 ; M 350,300 350,350 350,350 350,300 ; M 350,300 350,350 367.1518980514384,350 367.1518980514384,300 " />
+          </path>
+          <path fill="white" d="M 393.13924077942465,300 400,300 400,350 393.13924077942465,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="9s" keyTimes="0;0.5;1"
+              values="M 393.13924077942465,300 400,300 400,350 393.13924077942465,350 ; M 400,300 400,300 400,350 400,350 ; M 393.13924077942465,300 400,300 400,350 393.13924077942465,350 " />
+          </path>
+          <path fill="white" d="M 350,350 350,366.94484311586626 400,366.94484311586626 400,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 350,350 350,366.94484311586626 400,366.94484311586626 400,350 ; M 350,350 350,350 400,350 400,350 ; M 350,350 350,366.94484311586626 400,366.94484311586626 400,350 " />
+          </path>
+          <path fill="white" d="M 350,350 350,400 366.94484311586626,400 366.94484311586626,350 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 350,350 350,400 366.94484311586626,400 366.94484311586626,350 ; M 350,350 350,400 350,400 350,350 ; M 350,350 350,400 366.94484311586626,400 366.94484311586626,350 " />
+          </path>
+          <path fill="white" d="M 393.2220627536535,350 400,350 400,400 393.2220627536535,400 ">
+            <animate attributeName="d" repeatDur="indefinite" dur="8s" keyTimes="0;0.5;1"
+              values="M 393.2220627536535,350 400,350 400,400 393.2220627536535,400 ; M 400,350 400,350 400,400 400,400 ; M 393.2220627536535,350 400,350 400,400 393.2220627536535,400 " />
+          </path>
+        </g>
+      </svg>
+    </g>
+    <text y="2250" class="small">
+      <tspan x="1000">Some <tspan fill="#ff6600">Fuzzy Boxes</tspan> that need to be animated!</tspan>
+    </text>
+  </g>
+
+  <!--Future Work, Challenges, and Conclusion-->
+  <text y="1230" class="heavy">
+    <tspan x="1800" dy="1.2em" rotate="7" fill="green">Future Work and Conclusion</tspan>
+    <tspan x="1800" dy="1.2em" rotate="-7">-where do we <tspan fill="green"> go </tspan> from here?</tspan>
+  </text>
+  <text y="1350" class="small">
+    <tspan x="1830" dy="1.2em">• Further exploration into users' affective responses towards </tspan>
+    <tspan fill="green"> SVGs </tspan>
+    <tspan x="1830" dy="1.2em">• creating intuitive filtered.ink primitives </tspan>
+    
+  </text>
+
+  <!--Possible difficulties:
+    strict with grammar, hard to transform to other kinds of files, not able to display in many places
+  -->
+
+
+  
+  <g>
+    <image x="1830" y="1460" width="800" height="800" xlink:href="./meme.png" />
+  <image x="2650" y="1500" width="800" height="400" xlink:href="./comparison.jpeg" />
+  </g>
+  <text y="1905" class="heavy">
+    <tspan x="2750" dy="1.2em" rotate="7" fill="green">Acknowledgements</tspan>
+  </text>
+  <text y="1980" class="small">
+    <tspan x="2760" dy="1.2em">Thank you Jeff for your generous  
+    </tspan>
+  </text>
+  <text y="2020" class ="small">
+  <tspan x="2760" dy="1.2em">mentorship, Catherine for providing </tspan>
+  </text>
+  <text y="2060" class="small">
+    <tspan x="2760" dy="1.2em"> thoughtful feedback, and Tongyu and</tspan>
+  </text>
+  <text y="2100" class="small">
+    <tspan x="2760" dy="1.2em">Joshua for your prior work on filtered.ink</tspan>
+  </text>
+</svg>
