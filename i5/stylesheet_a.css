@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+section {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.noise1 {
+  position:absolute;
+  width: 400px;
+  height: 200px;
+  background:
+    linear-gradient(200deg, rgb(21, 33, 63), transparent),
+    url(./turbulence1.svg);
+    filter: contrast(170%) brightness(1000%);
+}
+
+.vertical_overlay1 {
+  /* ... */
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: rgb(215, 191, 216);
+  mix-blend-mode: multiply;
+}
+
+.noise2 {
+  position:absolute;
+  width: 400px;
+  height: 200px;
+  background:
+    linear-gradient(20deg, rgb(37, 7, 43), transparent),
+    url(./turbulence.svg);
+    filter: contrast(170%) brightness(1000%);
+}
+
+/* Chrome-specific */
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+  .noise {
+    filter: contrast(290%) brightness(1000%);
+  }
+}
+
+/* Isolation creates a new stacking context for mix-blend-mode. See: https://developer.mozilla.org/en-US/docs/Web/CSS/isolation */
+.isolate {
+  isolation: isolate;
+  position: relative;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  /* ... */
+}
+
+.ball {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 250px;
+  border-radius: 125px;
+  overflow: hidden;
+}
+
+/* To continue the demo of noise, the shadow on the ground. No isolation here, so the blending includes the background */
+.ground {
+  position: absolute;
+  width: 150%;
+  height: 140px;
+  bottom: -10px;
+  left: -65%;
+  mix-blend-mode: multiply;
+}
+
+.ground-shadow {
+  rotate:90deg;
+  width: 50%;
+  height: 140px;
+  border-radius: 10%;
+  background: radial-gradient(circle at 30%, rgb(134, 45, 117), rgba(245, 152, 255, 0)), url(./turbulence1.svg);
+  filter: contrast(150%) brightness(700%);
+}

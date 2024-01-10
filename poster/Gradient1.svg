@@ -1,0 +1,8 @@
+<svg viewBox="0 0 200 200" xmlns='http://www.w3.org/2000/svg'>
+  <filter id="blurB">
+    <feGaussianBlur stdDeviation="50" />
+  </filter>
+
+  <circle cx = "100" cy = "100" r = "80" stroke="lightgreen" stroke-width="80" stroke-opacity="80%" fill="green" opacity=".5" filter="url(#blurB)"/>
+
+</svg>

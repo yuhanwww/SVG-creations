@@ -1,0 +1,7 @@
+body {
+   background-color: rgb(25, 64, 25); 
+}
+
+img { 
+  mix-blend-mode: multiply;
+ }
