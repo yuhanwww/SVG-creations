@@ -18,6 +18,7 @@ The SVG creations are all vector based, and I mainly explored the possibility of
 
 At the end of the program, together with Pearl Zhang[^1], we coded a poster completely under <svg> tags to showcase the flexibility of SVG images and presented it on the Brown annual CS undergraduate research symposium. 
 <img width="800" alt="poster preview" src="poster/poster preview.png">
+
 You can find an animated version on [replit](https://replit.com/@Yuhanwww/SVG-Poster-Explore-CSR-Pearl-Zhang-and-Yuhan-Wang)!
 
 [^1]:Swarthmore College
