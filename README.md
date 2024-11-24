@@ -17,7 +17,7 @@ i1-i3 showcases the precision. i4-i6 showcases its flexibility to be blurry, ran
 The SVG creations are all vector based, and I mainly explored the possibility of vector images in this exploritory research program. Vecotr images are precise, can be as random and blurry as pixel iamges, and most importantly, can combine animations in the image file, which extends the possibility of webpage backgrounds as it can be embedded in html with <svg> tags. 
 
 At the end of the program, together with Pearl Zhang[^1], we coded a poster completely under <svg> tags to showcase the flexibility of SVG images and presented it on the Brown annual CS undergraduate research symposium. 
-<img width="800" alt="poster preview" src="poster/poster preview.png">
+<a href="https://yuhanwww.github.io/exploreCSR-poster-Wang-Zhang/"><img width="800" alt="poster preview" src="poster/poster preview.png"></a>
 
 You can find an animated version on [replit](https://replit.com/@Yuhanwww/SVG-Poster-Explore-CSR-Pearl-Zhang-and-Yuhan-Wang)!
 
